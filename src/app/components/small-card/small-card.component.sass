@@ -1,21 +1,43 @@
+@use '../../../values'
+
 .container_small_card
   width: 700px
   margin-bottom: 15px
 
   .container_small_card_content
     display: flex
+    gap: 20px
 
     .small_card_picture
       a
         img
-          width: 200px
-          margin-right: 20px
+          width: 250px
+          height: 120px
+
 
     .small_card_title
       display: flex
       justify-content: center
       align-items: center
 
-.container_small_card_separator
-  margin-top: 15px
+  .container_small_card_separator
+    margin-top: 15px
+
+  @media (max-width: values.$small-screen)
+    width: 400px
+
+    .container_small_card_content
+      .small_card_picture
+        a
+          img
+            width: 150px
+            height: 72px
+      .small_card_title
+        font-size: .9rem
+
+    .container_small_card_separator
+      max-width: 90vw
+
+
+
 
