@@ -3,30 +3,20 @@
 <div class="container_articles">
   <div class="articles_main">
     <app-big-card
-      Id="1"
-      pictureCover="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.u3mgmYMq4ofTd4lBtZtbxQHaD4%26pid%3DApi&f=1&ipt=56d0f7d8971fff568ec0d6048beea63cc5ef87066219dfd0a90d2160ccaa4f50&ipo=images"
-      cardTitle="Nova versão do Angular Lançada"
-      cardDescription="Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima amet deleniti magni necessitatibus delectus nihil vel nulla hic obcaecati adipisci?"
+      Id="{{ MainPost.id }}"
+      pictureCover="{{ MainPost.picture }}"
+      cardTitle="{{ MainPost.title }}"
+      cardDescription="{{ MainPost.subtitle }}"
     ></app-big-card>
   </div>
 
   <div class="articles_others">
     <app-small-card
-      Id="2"
-      pictureCover="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.04Jcog43xUjhHcMeJV813QHaCy%26pid%3DApi&f=1&ipt=8fff564f453f4f7e7b12db77a8b962dca96d73d1c63031f90f3a3efa17388744&ipo=images"
-      cardTitle="Learn coding! without code today to code!"
-    ></app-small-card>
-
-    <app-small-card
-      Id="3"
-      pictureCover="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.r5F06c-VQRaU2luSlxEobAHaEs%26pid%3DApi&f=1&ipt=2558685fc181914fb9dfc6dbdaf9621ade225e2b00855b6cf7b0d0d68bea0639&ipo=images"
-      cardTitle="Serious bussiness in tech"
-    ></app-small-card>
-
-    <app-small-card
-      Id="4"
-      pictureCover="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.GghEwKbawlVApgA9laaCggHaEK%26pid%3DApi&f=1&ipt=322fb06fff3e3d9384cdf4b24793c6d83b7e3b079c313d21ab4719f7e8d86022&ipo=images"
-      cardTitle="Something about hardware"
-    ></app-small-card>
+      *ngFor="let post of otherPosts; let i = index"
+      Id="{{ post.id }}"
+      pictureCover="{{ post.picture }}"
+      cardTitle="{{ post.title }}"
+    >
+    </app-small-card>
   </div>
 </div>
