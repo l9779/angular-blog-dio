@@ -23,18 +23,26 @@ export class HomeComponent implements OnInit {
     description: '',
   };
   otherPosts: Post[] = [];
+  previousPosts: Post[] = [];
 
   constructor() {}
 
   ngOnInit(): void {
     this.setMainPost();
     this.setOtherPosts();
+    this.setPreviousPosts();
   }
 
   setMainPost(): void {
     this.MainPost = dataFake[0];
   }
   setOtherPosts(): void {
-    this.otherPosts = dataFake.filter((post) => post.id !== '1');
+    const [p1, p2, p3, p4] = dataFake;
+    this.otherPosts = [p2, p3, p4];
+  }
+  setPreviousPosts(): void {
+    this.previousPosts = dataFake.filter(
+      (post) => !this.otherPosts.includes(post) && post.id !== '1'
+    );
   }
 }

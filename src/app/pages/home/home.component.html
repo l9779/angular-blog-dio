@@ -20,3 +20,14 @@
     </app-small-card>
   </div>
 </div>
+
+<app-previous-posts-header></app-previous-posts-header>
+
+<div class="previous_articles">
+  <app-small-card
+    *ngFor="let post of previousPosts"
+    Id="{{ post.id }}"
+    pictureCover="{{ post.picture }}"
+    cardTitle="{{ post.title }}"
+  ></app-small-card>
+</div>

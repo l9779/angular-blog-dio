@@ -1,7 +1,7 @@
 @use '../../../values'
 
 .container_small_card
-  width: 700px
+  min-width: 700px
   margin-bottom: 15px
 
   .container_small_card_content
@@ -15,7 +15,6 @@
           height: 120px
           border-radius: 5px
 
-
     .small_card_title
       display: flex
       justify-content: center
@@ -24,9 +23,12 @@
   .container_small_card_separator
     margin-top: 15px
 
-  @media (max-width: values.$small-screen)
-    width: 400px
+  @media (max-width: values.$medium-screen)
+    min-width: 640px
+    margin: 0
 
+  @media (max-width: values.$small-screen)
+    min-width: 460px
     .container_small_card_content
       .small_card_picture
         a
@@ -35,9 +37,7 @@
             height: 72px
       .small_card_title
         font-size: .9rem
-
-    .container_small_card_separator
-      max-width: 90vw
+        width: 240px
 
 
 
