@@ -36,10 +36,12 @@ export class HomeComponent implements OnInit {
   setMainPost(): void {
     this.MainPost = dataFake[0];
   }
+
   setOtherPosts(): void {
     const [p1, p2, p3, p4] = dataFake;
     this.otherPosts = [p2, p3, p4];
   }
+
   setPreviousPosts(): void {
     this.previousPosts = dataFake.filter(
       (post) => !this.otherPosts.includes(post) && post.id !== '1'

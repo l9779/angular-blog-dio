@@ -58,7 +58,7 @@ export const dataFake = [
     id: '7',
     picture:
       'https://dgti.ufla.br/images/ilustracao-de-cms-de-design-plano_23-2148822448.jpg',
-    title: 'Mais coisa',
+    title: 'teste texto',
     subtitle: '',
     description:
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium eius, fuga delectus expedita eaque reiciendis nihil aspernatur ex velit soluta deleniti repudiandae, aliquid, cumque dignissimos qui! Blanditiis delectus molestias eum in ipsa animi quam totam velit ex est consequuntur assumenda doloribus laborum enim, nisi dicta voluptates atque natus, officia doloremque minima maiores temporibus. Sapiente, dolore delectus iusto cum quo quis.',

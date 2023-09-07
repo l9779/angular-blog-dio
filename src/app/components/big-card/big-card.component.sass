@@ -1,45 +1,43 @@
 @use '../../../values'
 
-.container_big_card
-  margin: 0 20px
-  width: 400px
-  max-height: 300px
+.container
+  padding: 0 12rem 2rem 12rem
+  text-align: justify
 
   display: flex
   flex-direction: column
-  align-items: flex-start
-  justify-content: flex-start
+  align-items: center
+  gap: 1rem
 
-  .big_card_picture
-    a
-      img
-        width: 100%
-        min-width: 400px
-        border-radius: 5px
+  a
+    width: 90vw
 
-  .big_card_title
+  .picture
+    display: flex
+    justify-content: center
+
+    img
+      width: 100%
+      height: 200px
+      object-fit: cover
+
+  .title
     h1
-      font-size: 2rem
-      margin-top: 15px
+      font-size: 2.6rem
 
-  .big_card_description
-    margin-top: 10px
-    p
-      a
-        color: grey
-        font-size: 1.6rem
+  .description
+    color: grey
+    font-size: 1.4rem
 
-  @media (max-width: values.$medium-screen)
-    width: 90%
-    align-items: center
+  @media (min-width: values.$medium-screen)
+    a
+      width: 70vw
 
-    .big_card_description
-      width: 90%
+  @media (min-width: values.$large-screen)
+    padding: 0
+    a
+      width: 40vw
 
-  @media (max-width: values.$small-screen)
-    margin: 0 auto 20px auto
-
-    .big_card_picture
-      a
-        img
-          min-width: 90%
+  @media (min-width: values.$extra-large-screen)
+    a
+      width: 30vw

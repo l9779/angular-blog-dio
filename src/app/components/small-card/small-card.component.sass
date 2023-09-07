@@ -1,44 +1,45 @@
 @use '../../../values'
 
-.container_small_card
-  min-width: 700px
-  margin-bottom: 15px
+.container
+  width: 100vw
 
-  .container_small_card_content
+  .content
     display: flex
-    gap: 20px
+    align-items: center
+    justify-content: flex-start
+    padding: 0 2rem
+    gap: 16px
 
-    .small_card_picture
-      a
-        img
-          width: 250px
-          height: 120px
-          border-radius: 5px
+    img
+      width: 14rem
+      height: 12rem
+      object-fit: cover
 
-    .small_card_title
-      display: flex
-      justify-content: center
-      align-items: center
+    .title
+      font-size: 2rem
+      text-align: start
 
-  .container_small_card_separator
-    margin-top: 15px
+  hr
+    margin-top: 10px
 
-  @media (max-width: values.$medium-screen)
-    min-width: 640px
-    margin: 0
+  @media (min-width: values.$medium-screen)
+    width: 70vw
 
-  @media (max-width: values.$small-screen)
-    min-width: 460px
-    .container_small_card_content
-      .small_card_picture
-        a
-          img
-            width: 150px
-            height: 72px
-      .small_card_title
-        font-size: .9rem
-        width: 240px
+  @media (min-width: values.$large-screen)
+    max-width: 425px
+    .content
+      img
+        width: 18rem
 
+  @media (min-width: values.$extra-large-screen)
+    max-width: 525px
 
+.white_card
+  background-color: #e0e0e0
 
+  .content
+    .title
+      color: #292929
 
+  hr
+    color: #292929

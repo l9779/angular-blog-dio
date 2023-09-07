@@ -1,33 +1,36 @@
-<app-menu-title></app-menu-title>
+<main>
+  <app-menu-title></app-menu-title>
 
-<div class="container_articles">
-  <div class="articles_main">
-    <app-big-card
-      Id="{{ MainPost.id }}"
-      pictureCover="{{ MainPost.picture }}"
-      cardTitle="{{ MainPost.title }}"
-      cardDescription="{{ MainPost.subtitle }}"
-    ></app-big-card>
+  <div class="container_posts">
+    <div class="main_post">
+      <app-big-card
+        Id="{{ MainPost.id }}"
+        pictureCover="{{ MainPost.picture }}"
+        cardTitle="{{ MainPost.title }}"
+        cardDescription="{{ MainPost.subtitle }}"
+      ></app-big-card>
+    </div>
+
+    <div class="other_posts">
+      <app-small-card
+        *ngFor="let post of otherPosts; let i = index"
+        Id="{{ post.id }}"
+        pictureCover="{{ post.picture }}"
+        cardTitle="{{ post.title }}"
+      >
+      </app-small-card>
+    </div>
   </div>
 
-  <div class="articles_others">
+  <app-previous-posts-header></app-previous-posts-header>
+
+  <div class="container_previous_posts">
     <app-small-card
-      *ngFor="let post of otherPosts; let i = index"
+      *ngFor="let post of previousPosts"
       Id="{{ post.id }}"
       pictureCover="{{ post.picture }}"
       cardTitle="{{ post.title }}"
-    >
-    </app-small-card>
+      color="white_card"
+    ></app-small-card>
   </div>
-</div>
-
-<app-previous-posts-header></app-previous-posts-header>
-
-<div class="previous_articles">
-  <app-small-card
-    *ngFor="let post of previousPosts"
-    Id="{{ post.id }}"
-    pictureCover="{{ post.picture }}"
-    cardTitle="{{ post.title }}"
-  ></app-small-card>
-</div>
+</main>

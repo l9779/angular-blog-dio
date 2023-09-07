@@ -12,6 +12,8 @@ export class SmallCardComponent implements OnInit {
   pictureCover: string = '';
   @Input()
   cardTitle: string = '';
+  @Input()
+  color: string = '';
 
   constructor() {}
 
