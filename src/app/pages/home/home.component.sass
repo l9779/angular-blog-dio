@@ -17,6 +17,18 @@ main
     .main_post
       max-width: 100vw
 
+  .container_previous_posts
+    width: 100vw
+    background-color: #f0f0f0
+    padding: 20px 0
+
+  @media (min-width: values.$medium-screen)
+    .container_previous_posts
+      display: flex
+      flex-flow: nowrap column
+      justify-content: center
+      align-items: center
+
   @media (min-width: values.$large-screen)
     max-width: 90vw
 
@@ -27,16 +39,14 @@ main
       margin-bottom: 80px
 
     .container_previous_posts
-      display: flex
-      flex-flow: wrap column
-      justify-content: center
-      align-items: center
+      flex-wrap: wrap
 
       height: 75vh
-      width: 100%
+      width: 100vw
 
   @media (min-width: values.$extra-large-screen)
     max-width: 1100px
 
     .container_previous_posts
-      max-width: 1100px
+      gap: 0 10px
+      padding: 0 120px
